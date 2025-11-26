@@ -1,0 +1,49 @@
+﻿@model RoarMot.Models.Compra
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Compra</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="IdCompra" />
+            <div class="form-group">
+                <label asp-for="MetodoPago" class="control-label"></label>
+                <input asp-for="MetodoPago" class="form-control" />
+                <span asp-validation-for="MetodoPago" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AgregarMasArtiCulos" class="control-label"></label>
+                <input asp-for="AgregarMasArtiCulos" class="form-control" />
+                <span asp-validation-for="AgregarMasArtiCulos" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="EstadoCompra" class="control-label"></label>
+                <input asp-for="EstadoCompra" class="form-control" />
+                <span asp-validation-for="EstadoCompra" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FacturaProducto" class="control-label"></label>
+                <input asp-for="FacturaProducto" class="form-control" />
+                <span asp-validation-for="FacturaProducto" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

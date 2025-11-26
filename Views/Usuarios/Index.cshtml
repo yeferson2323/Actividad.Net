@@ -55,53 +55,54 @@
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.TipoDocumento)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.NumeroUsuario)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.NombreUsuario)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ApellidoUsuario)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.TelUsuario)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.CorreoUsuario)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Contrasena)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.EstadoUsuario)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.FechaCreacion)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.NombreEmpresa)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.UrlImagenPerfil)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.UrlImagenMoto)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.RolIdRolNavigation.IdRol)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.IdUsuario">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.IdUsuario">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.IdUsuario">Delete</a>
-            </td>
-        </tr>
-}
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TipoDocumento)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NumeroUsuario)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NombreUsuario)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ApellidoUsuario)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TelUsuario)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CorreoUsuario)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Contrasena)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.EstadoUsuario)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FechaCreacion)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NombreEmpresa)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.UrlImagenPerfil)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.UrlImagenMoto)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.RolIdRolNavigation.IdRol)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.IdUsuario">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.IdUsuario">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.IdUsuario">Delete</a>
+                </td>
+            </tr>
+        }
     </tbody>
 </table>
